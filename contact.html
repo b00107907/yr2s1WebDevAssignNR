@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<!-- 
+	B00107907 Declan McGuire
+	Web & Social Media for Enterprise
+	CA1 Assignment - Website Project
+	November 2018
+
+	-->
+<head>
+<meta charset="utf-8">
+<title>Marlan Systems</title>
+<link href="css/style.css" rel="stylesheet">
+<meta name="title" content="Marlan Systems">
+<meta name="keywords" content="Marlan systems, CAD, Revit, BIM, 3D Modeling, AutoCAD, AEC">
+<meta name="description" content="Marlan Systems provides expertise in CAD and BIM to Irish SME's in the construction and engineering sectors.">
+</head>
+
+<body id="top">
+<!-- id as target for internal link from footer --> 
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~ Navigation Block - Common to all pages ~~~~~~~~~~~~~~~~~~~~~~ -->
+<nav> <!-- styled as semantic container in CSS -->
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    <li><a href="2D.html">2D CAD</a></li>
+    <li><a href="3D.html">3D CAD</a></li>
+    <li><a href="consult.html">Consulting</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="contact.html" class="currentpage">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~ Page Content ~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<header> <!-- styled as semantic container in CSS -->
+  <h1>Contact Us</h1>
+  <h2>It's good to talk</h2>
+</header>
+<main> 
+  <!-- ~~~~~~~~~~~~ Contact Form, email data to student email ~~~~~~~~~~~~ -->
+  <section class="content-row-title">
+    <h2 class="content-row-h2">Contact Form</h2>
+    <article class="wideblock">
+      <div>
+        <form action="mailto:b00107907@student.itb.ie" method="post">
+          <br>
+          <label class="getintouch">First name: </label>
+          <input class="getintouch" type="text" name="firstname" required placeholder="Enter first name" autofocus>
+          <br>
+          <label class="getintouch">Second name: </label>
+          <input class="getintouch" type="text" name="secondname" required placeholder="Enter second name">
+          <br>
+          <label class="getintouch">E-mail:</label>
+          <input class="getintouch" type="email" name="email" required placeholder="Email address">
+          <br>
+          <label class="getintouch">Mobile:</label>
+          <input class="getintouch" type="tel" name="mobile" pattern="\d{3}[\ ]\d{3}[\ ]\d{4}" title="Phone Number Format: 089 123 4567" required placeholder="089 123 4567">
+          <br>
+          <label class="getintouch">Question or Comment:</label>
+          <textarea class="getintouch" rows="5" name="comment" required placeholder="Your question or comment here..." ></textarea>
+          <br>
+          <input id="getintouch" type="submit" name="submit" value="Submit">
+          <button id="gitreset" type="reset" value="Reset">Reset</button>
+        </form>
+        <br>
+        <hr>
+        <br>
+      </div>
+      <div class="leftcolumn">
+        <h4>Alternatively, get in touch by email, phone or post as follows:</h4>
+        <p><strong>By email: </strong>info@marlansystems.com</p>
+        <p><strong>By phone: </strong>+353 (0)46 902 4401</p>
+        <p><strong>By post: </strong>Dean Hill, Hayes, Navan, Co. Meath, C15 Y5T9.</p>
+        <p><strong>GPS/Nav: </strong>53.661170, -6.593676</p>
+        <p><em>Please note our offices are not open to the general public and visitors are received by appointment only.</em></p>
+        <br>
+      </div>
+      <div class="rightcolumn">
+        <iframe width="250" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-6.705436706542969%2C53.61756112967935%2C-6.478843688964844%2C53.70239758052296&amp;layer=transportmap&amp;marker=53.66000069940216%2C-6.592140197753906" style="border: 1px solid black"></iframe>
+        <br/>
+        <small><a href="https://www.openstreetmap.org/?mlat=53.6600&amp;mlon=-6.5921#map=13/53.6600/-6.5921&amp;layers=T">View Larger Map</a></small> </div>
+      <br>
+      <hr>
+    </article>
+  </section>
+</main>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~ Footer Block - Common to all pages ~~~~~~~~~~~~~~~~~~~~~~ -->
+<footer> <!-- styled as semantic container in CSS -->
+  <div class="footerleft">
+    <p><a href="#top">^ Back to Top</a></p>
+  </div>
+  <div class="footermiddle">
+    <p>&copy; Copyright 2018<br>
+      Last updated November 2018</p>
+  </div>
+  <div class="footerright">
+    <p><a href="sitemap.html">Site map</a></p>
+  </div>
+</footer>
+</body>
+</html>

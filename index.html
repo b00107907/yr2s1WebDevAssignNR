@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<!-- 
+	B00107907 Declan McGuire
+	Web & Social Media for Enterprise
+	CA1 Assignment - Website Project
+	November 2018
+
+	Home page for site, constructed in Dreamweaver but almost
+	entirely manually. Defines the overall look and feel of the site.
+	Structure is Navbar, hero image/title, flash cards, footer.
+	
+	*** Three column liquid layout used, 100% width (not fixed). ***
+	-->
+<head>
+<meta charset="utf-8">
+<title>Marlan Systems</title>
+<link href="css/style.css" rel="stylesheet">
+<meta name="title" content="Marlan Systems">
+<meta name="keywords" content="Marlan systems, CAD, Revit, BIM, 3D Modeling, AutoCAD, AEC">
+<meta name="description" content="Marlan Systems provides expertise in CAD and BIM to Irish SME's in the construction and engineering sectors.">
+</head>
+
+<body id="top">
+<!-- id as target for internal link from footer --> 
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~ Navigation Block - Common to all pages ~~~~~~~~~~~~~~~~~~~~~~ -->
+<nav> <!-- styled as semantic container in CSS -->
+  <ul>
+    <li><a href="index.html" class="currentpage">Home</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    <li><a href="2D.html">2D CAD</a></li>
+    <li><a href="3D.html">3D CAD</a></li>
+    <li><a href="consult.html">Consulting</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~ Page Content ~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<header> <!-- styled as semantic container in CSS -->
+  <h1>Marlan Systems</h1>
+  <h2>CAD, BIM and 3D Modeling Specialists</h2>
+</header>
+<main> 
+  
+  <!-- ~~~~~~~~~~~~ Primary content row, highlights the 3 principal services provided ~~~~~~~~~~~~ -->
+  <div class="content-row-title">
+    <h2 class="content-row-h2">Our Services</h2>
+    <p class ="content-row-p">We specialise in</p>
+    
+    <!-- First card for highlighted services --> 
+  </div>
+  <section class="card-table"> <!-- A container for our 'cards' -->
+    <div class="playingcard">
+      <h4>2D CAD</h4>
+      <img src="images/2d-cad-tile.jpg" alt="2D CAD Thumbnail image" class="img-tn">
+      <p>Our 2D CAD services cover every industry segment across a range of sectors including Mechanical, Electrical and Civil engineering as well as Architectural and Construction. </p>
+      <a href="2D.html" class="learnmore">Learn More</a> <!-- anchor styled as a button --> 
+    </div>
+    <!-- Second card for highlighted services -->
+    <div class="playingcard">
+      <h4>Revit/BIM</h4>
+      <img src="images/3d-cad-tile.jpg" alt="3D CAD Thumbnail image" class="img-tn">
+      <p>Our Building Information Modelling services are developed specifically for rapid turnaround on multi-disciplinary projects with a very high degree of services integration.</p>
+      <a href="3D.html" class="learnmore">Learn More</a> </div>
+    <!-- Third card for highlighted services -->
+    <div class="playingcard">
+      <h4>Consultancy &amp; Training</h4>
+      <img src="images/consult-tile.jpg" alt="Consulting Thumbnail image" class="img-tn">
+      <p>By leveraging our expertise to provide consultancy and training services to your in-house staff, Marlan Systems acts as a force multiplier for your organisation.</p>
+      <a href="consult.html" class="learnmore">Learn More</a> </div>
+  </section>
+  
+  <!-- ~~~~~~~~~~~~ Below the fold, why Marlan systems ~~~~~~~~~~~~ -->
+  <section class="content-row-title">
+    <h2 class="content-row-h2">Why Marlan Systems?</h2>
+    <article class="wideblock">
+      <p><strong>Founded in 1999 </strong>Marlan Systems has been providing CAD and Design services to clients across Leinster for almost two decades.</p>
+      <p>In that time Computer Aided Design has changed beyond all recognition. Today's projects involve closely integrated multi-disciplinary designs which require a collaborative approach from the outset.</p>
+      <p>Our approach has evolved to focus on training and consultancy with the emphasis on providing high level consultancy expertise to our client's own project teams to help them improve workflows and thus meet project deliverables with maximum efficiency.</p>
+      <p>Training is particularly beneficial when new staff are taken on and helps quantify end user proficiency against industry established benchmarks.</p>
+      <a href="aboutus.html" class="learnmore">Find out how we can help</a> </article>
+  </section>
+</main>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~ Footer Block - Common to all pages ~~~~~~~~~~~~~~~~~~~~~~ -->
+<footer> <!-- styled as semantic container in CSS -->
+  <div class="footerleft">
+    <p><a href="#top">^ Back to Top</a></p>
+  </div>
+  <div class="footermiddle">
+    <p>&copy; Copyright 2018<br>
+      Last updated November 2018</p>
+  </div>
+  <div class="footerright">
+    <p><a href="sitemap.html">Site map</a></p>
+  </div>
+</footer>
+</body>
+</html>

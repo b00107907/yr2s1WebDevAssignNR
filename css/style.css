@@ -1,0 +1,316 @@
+@charset "utf-8";
+/*
+	B00107907 Declan McGuire
+	Web & Social Media for Enterprise
+	CA1 Assignment - Website Project
+	November 2018
+
+	CSS is comment heavy for assignment reasons.
+	In operational use, minimised CSS with essential comments/credits only.
+
+	All colours referenced from:
+	https://www.w3schools.com/colors/colors_names.asp
+	Other credits as commented in CSS.
+*/
+
+/* ------------------------------- Clear formatting in browser ---------------------------------- */
+
+* {								/* Global */
+	margin: 0;
+	padding: 0;
+}
+/* ------------------------------- Generic Body styling ----------------------------------------- */
+
+
+body {
+	width: 100%;				/* Set width to 100%*/
+	margin: auto;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	background-color: #FFFFFF;
+}
+body h1 {						/* Styling for <h1> tag */
+	color: #00005D;				/* Colour for <h1> tag */
+}
+body h2 {						/* Styling for <h2> tag */
+	font-size: medium;
+	color: #4169E1;				/* Colour for <h2> tag */
+	margin: 10px 0px; 			/* Margin top & bottom for <h2> tag */
+}
+body p {						/* Styling for <p> tag */
+	margin: 10px 0px; 			/* 10 pixels top & bottom, no margin left & right */
+	font-size: 11pt;			/* Font size 11 point */
+	color: #2F4F4F;				/* A dark grey that's almost-but-not-quite-black */
+}
+/* ------------------------------- Navigation Bar ----------------------------------------------- */
+
+/* 	
+	Nav bar styling is hand carved in CSS rather than using bootstrap.
+	Authors choice based on a desire to minimise 3rd party CSS & Javascript we don't control.
+	This of course mitigates against mobile, so if time permits media queries/bootstrap may
+	be integrated at a later stage. 
+*/
+
+nav {							/* Styling for nav semantic container */
+	overflow: hidden;			/* Prevent content overflowing the container */
+	text-align: center;			/* Default is left align, so override to centre menu items*/
+	position: sticky;			/* Scroll with content until top of screen */
+	top: 0px;					/* then stay against on top edge */
+	background-color: #2A2A2A;	/* Change background to dark grey */
+	width: 100%;				/* Nav div set to match page width */
+	z-index: 1;
+}
+nav ul {
+	list-style-type: none;		/* Remove ul list bullet points */
+	overflow: hidden;			/* Prevent list elements going outside of the container (clipped) */
+}
+nav li {
+	width: auto;				/* Adjsuted to spread out nav list items. */
+	padding: 0 20px;
+	display: inline-block; 		/* Block elements to be displayed inline */
+	align-items: center;
+}
+nav li a {
+	display: block;				/* Make whole link area clickable, not just the word */
+	text-decoration: none;		/* Remove hyper link underlines */
+	padding: 10px 20px;			/* Padding nav bar links: 10 pixels top & bottom, 20 pixels left & right */
+	color: #FFFFFF;				/* Make Nav text white */
+	text-align: center;			/* Centre Nav text in container element */
+}
+nav li a:hover {				/* When mouse hovers over nav list item... */
+	color: #96a843;				/* ...change text colour to green */
+}
+.currentpage {					/* For the 'currentpage' class identifier... */
+	background-color: #96a843;	/* ...set the navbar text background to green */
+}
+nav li a:hover.currentpage {	/* When mouse hovers over "currentpage" nav list item... */
+	background-color: #2A2A2A;	/* Change background to dark grey (turns off background green) */
+	color: #96a843;				/* ...change text colour to green */
+}
+/* ------------------------------- <Header> semantic div ------------------------------------- */
+
+header {						/* Primary page title area, image to background */
+	overflow: auto;
+	height: 350px;				/* Defaults to 350px high */
+	text-align: center;			/* Text elements centred on the Div */
+	background-image: url('../images/banner-home.jpeg');	/* Banner image for background  */
+}
+header h1 {						/* Header <H1> tag styling */
+	color: #FFFFFF;				/* White text */
+	text-shadow: 1px 1px 5px #2A2A2A;	/* Drop shadow for legibility */
+	padding-top: 80px;			/* Drop from top of DIV */
+	font-size: 5em;				/* and boost text size */
+}
+header h2 {
+	color: #D4F831;				/* 'Highlight' colour for <H2> text/tagline */
+	text-shadow: 1px 1px 5px #2a2a2a;	/* Drop shadow for legibility */
+	font-size: 2.5em;			/* Subheading/tagline text below heading 1 */
+}
+/* ------------------------------- Content Row, common to all pages ------------------------------ */
+
+.content-row-title {			/* H1 & H2 container in main body of home page */
+	text-align: center;
+	line-height: 1.5;
+	padding: 30px;				/* Spaceing for asthetics */
+	background-color: #f6f6f6;
+}
+.content-row-h2 {				/* Style H2 tag in Content Row */
+	color: #96a843;				/* Set the Green colour for text */
+	text-align: center;			/* centre align (potentially redundant depending on parent) */
+	font-size: 2.5em;			/* Sizing based on visual asthetic */
+	margin: 0px;				/* remove gaps */
+}
+.content-row-p {				/* Style paragraph text beneath content row title */
+	color: #2A2A2A;				/* Apply dark grey colour scheme to text */
+	text-align: center;			/* centre align (potentially redundant depending on parent) */
+	font-size: 1.3em;			/* Sizing based on visual asthetic */
+}
+/* ------------------------------- 'Card table', holds flash cards on home page ------------ */
+
+.card-table {					/* The CSS Flexbox div on which the "playingcards" will sit */
+	background-color: #f6f6f6;	/* Background to grey */
+	display: flex;				/* Flex container for our 'playing cards' */
+	justify-content: center;	/* container content centred for asthetics */
+}
+/* -------------------------------  flash cards on home page ------------------------------ */
+
+.card-table > div {				/* Child selector for Divs to hold 'flash cards' on home page */
+	display: block;
+	width: 20%;
+	margin: 10px;
+	padding: 10px 10px 50px 10px;
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	/* box shadow borrowed directly from CSS flexbox on w3schools.com site as it suits our site.
+		Credit: https://www.w3schools.com/css/css3_flexbox.asp */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.playingcard:hover { 			/* Drop shadow mouseover for boxes on home page */
+	box-shadow: 0 4px 8px 0 black;
+}
+.card-table div h4 {			/* The <H4> heading on our cards */
+	color: #96a843;				/* Green colour */
+	font-size: 1.5em;			/* Enlarge font */
+	padding-top: 25px;
+	text-align: center;
+}
+.card-table p {					/* The <P> text on our cards */
+	/*display: block;			/* Redundant with <p> but may change */
+	color: #5c5c5c;
+	padding: 20px 10px 10px 20px;
+}
+.learnmore {					/* [Learn More] buttons on flash cards, a href's styled as buttons */
+	width: 35%;
+	background-color: #96a843;  /* standard green colour for button background */
+	border: none;
+	color: white;				/* Button text colour */
+	padding: 5px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 1.1em;			/* boost font a little... */
+	margin: 14px auto;			/* auto position button horizontally */
+}
+.learnmore:hover {				/* Simple drop shadow on hover for buttons */
+	box-shadow: 3px 3px 15px 1px grey;
+	text-decoration: none;
+}
+.img-tn {						/* Styling for thumbnail images on flash cards */
+	display: block;				/* display block with... */
+	margin: 5px auto;			/* ...margins 0/auto for centering */
+}
+.wideblock {					/* Below the fold block on the top level pages */
+	overflow: hidden;
+	width: 50%;
+	position: relative;			/* Relative positioning is a requirement of the brief */
+	margin: 50px auto;
+	text-align: justify;
+	padding: 20px 30px;
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	/* box shadow borrowed directly from CSS flexbox on w3schools.com site as it suits our site.
+		Credit: https://www.w3schools.com/css/css3_flexbox.asp */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.wideblock:hover { 				/* Drop shadow mouseover for boxes on home page */
+	box-shadow: 0 4px 8px 0 black;
+}
+
+.wideblock h5{					/* <h5> inline with <p> in text for this element */
+	display: inline;
+}
+.wideblock ol {
+	margin-left: 30%;
+}
+/* 
+ ------------------------------- Footer bar for all pages ------------------------------
+
+ Brief calls for sticky footer however in this case it doesn't suit the site and thus
+ the Nav bar is made sticky instead.
+ ---------------------------------------------------------------------------------------
+*/
+
+footer {						/* Container (semantic div) */
+	color: #FFFFFF;				/* Text colour to white */
+	background-color: #2A2A2A;	/* Background Grey to match nav bar */
+	margin-bottom: 5px;			/* Slight gap under, helps stop user trying to scroll past footer */
+	clear: both;
+}
+/* ----- Our <footer> div is a container for 3 more divs styled here ------ */
+
+.footerleft {					/* Footer left side div */
+	display: inline-block;		/* display as inline-block */
+	width: 15%;					/* set div to 15% page width */
+	margin: 10px;				/* set margin to 10 pixels */
+}
+.footerleft a {					/* Footer left hyper links need... */
+	text-decoration: none;		/* ...underlines removed & */
+	color: #FFFFFF;				/* colour set to white. */
+}
+.footermiddle {					/* Footer middle div */
+	width: 65%;					/* 65% page width (allowing for margins, so not 70%) */
+	display: inline-block;		/* for horizontal placement */
+	text-align: center;			/* and centre align the text */
+}
+.footermiddle p {
+	color: #FFFFFF;				/* colour set to white. */
+}
+.footerright {					/* Footer right side div, structure mirrors left side */
+	display: inline-block;		/* for horizontal placement */
+	text-decoration: none;		/* Hyperlink underlines removed */
+	width: 15%;					/* Div width to be 15% of page */
+	text-align: right;			/* Text to right side of Div */
+}
+.footerright a {				/* Footer right hyper links need... */
+	text-decoration: none;		/* ...underlines removed & */
+	color: #FFFFFF;				/* colour set to white. */
+}
+/* ------------------------------- Fixed width single colum layout Page (Sitemap.html) ------------------------------ */
+
+body.fixed {					/* A Class called fixed for the fixed width page @ 960px */
+	width: 960px;				/* fixed width, single column page is a requirement of the brief*/
+	background-image: linear-gradient(gray, white) /* CSS gradient is a requirement of the brief*/
+}
+.fixed ul {						/* navbar <ul> items */
+	margin: 0px;
+	padding: 0px;
+}
+section.fixed {					/* Main body of page */
+	text-align: left;
+	margin: 60px 0px 40px 100px;
+}
+/* ------------------------------- Two column layout Page (Contact.html) ------------------------------ */
+
+
+.leftcolumn {					/* Conatct details on contact page */
+	display:inline-block;
+}
+.rightcolumn {					/* iFrame with map on contact page */
+	display:inline-block;
+    height:auto;
+}
+
+
+/* -------------------------------  Basic contact form styling ------------------------------ */
+
+label.getintouch {				/* Label on contact form */
+	display: block;
+	float: left;
+	width: 220px;				/* Label width defines left edge of input fields */
+	font-weight: bold;			/* Bold text */
+	font-size: 11pt;			/* Match body font size */
+}
+
+input.getintouch {				/* Contact form input fields */
+	width: 180px;				/* default width */
+	margin-bottom: 5px;			/* Gap below input field */	
+}
+
+textarea.getintouch {			/* Contact form text area box */
+	width: 300px;
+	height: 120px;
+}
+
+#getintouch {					/* Styling for Submit on Contact form */
+	margin-left: 220px;				
+	margin-top: 5px;
+	width: 90px;
+}
+
+#gitreset {						/* Reset button on contact form */
+	margin-left: 20px;
+	margin-top: 5px;
+	width: 90px;
+}
+
+/* ------------------------------- Top level page images, item specific ------------------------------ */
+
+.img-fr{						/* right float for images */	
+	float: right;
+	margin: 2%;
+}
+
+.img-fl{						/* left float for images */	
+	float: left;
+	margin: 2%;
+}
+
